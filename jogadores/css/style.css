@@ -1,0 +1,32 @@
+body{
+    height: 100vh;
+    background: linear-gradient(red,rgb(78, 32, 32));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.jogador{
+    width: 420px;
+    height: 350px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.jogador button{
+    width: 75px;
+    border: none;
+    outline: none;
+    background: rgb(194, 14, 14);
+    color: white;
+    height: 35px;
+    cursor: pointer;
+}
+
