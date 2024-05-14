@@ -1,0 +1,62 @@
+package aplicacao;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+
+
+public class Interface {
+
+	public static void main(String[] args) {
+		
+		
+		// criar uma nova janela
+		JFrame frame = new JFrame("Interface do Usuario");
+		frame.setSize(400,300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLayout(null);
+		
+		// rotulo para o campo de texto
+		JLabel label = new JLabel("Digite:");
+		label.setBounds(20, 20, 100, 20);
+		frame.add(label);
+		
+		//campo de texto
+		JTextField textField = new JTextField();
+		textField.setBounds(120, 20, 200, 20);
+		frame.add(textField);
+		
+		//area de texto 
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(20, 50, 300, 150);
+		frame.add(textArea);
+		
+		//Botao
+		JButton button = new JButton("Clique aqui!");
+		button.setBounds(150, 220, 100, 30);
+		
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String textoDigitado = textField.getText();
+				textArea.append(textoDigitado + "\n");
+			}
+		});
+		
+		
+		
+		frame.add(button);
+		
+		frame.setVisible(true);
+		
+		
+	
+
+	}
+
+}
